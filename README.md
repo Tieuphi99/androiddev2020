@@ -10,7 +10,7 @@ Students are expected to:
 Student Info
 =======================
 
-* Name: *YourNameHere*
-* ID: *YourIdHere*
-* Group ID: *Your Group ID here*
+* Name: *Tran Kim Quoc Tuan*
+* ID: *USTHBI8-159*
+* Group ID: *2*
 
