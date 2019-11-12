@@ -2,14 +2,16 @@ package vn.edu.usth.weather;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.util.AttributeSet;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class WeatherActivity extends AppCompatActivity {
-    private ImageView imageView;
-    private TextView mytextView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,8 +22,6 @@ public class WeatherActivity extends AppCompatActivity {
         // Add the fragment to the 'container' FrameLayout
         getSupportFragmentManager().beginTransaction().add(
                 R.id.container, firstFragment).commit();
-        this.mytextView = (TextView)this.findViewById(R.id.mytextView);
-        this.imageView = (ImageView)this.findViewById(R.id.imageView);
     }
 
     @Override
