@@ -8,14 +8,15 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textSize="50sp"
+        android:layout_height="wrap_content"
+        android:text="@string/day"
         android:textAlignment="center"
-        android:text="@string/day" />
+        android:textSize="50sp" />
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@android:dimen/notification_large_icon_height"
         android:src="@drawable/weathericon_1" />
 
 </FrameLayout>
