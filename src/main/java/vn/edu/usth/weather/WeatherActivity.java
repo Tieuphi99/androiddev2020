@@ -1,7 +1,6 @@
 package vn.edu.usth.weather;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.os.Bundle;
 import android.util.AttributeSet;
