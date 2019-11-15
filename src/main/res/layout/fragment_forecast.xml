@@ -16,21 +16,22 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="72dp"
+            android:layout_height="60dp"
             android:gravity="center"
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="72dp"
-                android:layout_height="48dp"
-                android:gravity="center"
-                android:text="@string/day"
-                android:textSize="20sp" />
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:gravity="left|center"
+                android:text="Mon"
+                android:textSize="18sp" />
 
             <ImageView
                 android:layout_width="72dp"
                 android:layout_height="48dp"
-                android:contentDescription="@string/day"
+                android:contentDescription="icon"
                 android:src="@drawable/weathericon_1" />
 
             <LinearLayout
@@ -44,33 +45,34 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Partly Cloudy"
-                    android:textSize="20sp" />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="24C-31C"
-                    android:textSize="20sp" />
+                    android:textSize="18sp" />
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="72dp"
+            android:layout_height="60dp"
             android:gravity="center"
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="72dp"
-                android:layout_height="48dp"
-                android:gravity="center"
-                android:text="@string/day"
-                android:textSize="20sp" />
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:gravity="left|center"
+                android:text="Tue"
+                android:textSize="18sp" />
 
             <ImageView
                 android:layout_width="72dp"
                 android:layout_height="48dp"
-                android:contentDescription="@string/day"
+                android:contentDescription="icon"
                 android:src="@drawable/weathericon_1" />
 
             <LinearLayout
@@ -83,34 +85,35 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Partly Cloudy"
-                    android:textSize="20sp" />
+                    android:text="Showers"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="24C-31C"
-                    android:textSize="20sp" />
+                    android:text="24C-30C"
+                    android:textSize="18sp" />
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="72dp"
+            android:layout_height="60dp"
             android:gravity="center"
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="72dp"
-                android:layout_height="48dp"
-                android:gravity="center"
-                android:text="@string/day"
-                android:textSize="20sp" />
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:gravity="left|center"
+                android:text="Wed"
+                android:textSize="18sp" />
 
             <ImageView
                 android:layout_width="72dp"
                 android:layout_height="48dp"
-                android:contentDescription="@string/day"
+                android:contentDescription="icon"
                 android:src="@drawable/weathericon_1" />
 
             <LinearLayout
@@ -123,34 +126,35 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Partly Cloudy"
-                    android:textSize="20sp" />
+                    android:text="Rain"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="24C-31C"
-                    android:textSize="20sp" />
+                    android:text="22C-23C"
+                    android:textSize="18sp" />
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="72dp"
+            android:layout_height="60dp"
             android:gravity="center"
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="72dp"
-                android:layout_height="48dp"
-                android:gravity="center"
-                android:text="@string/day"
-                android:textSize="20sp" />
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:gravity="left|center"
+                android:text="Thu"
+                android:textSize="18sp" />
 
             <ImageView
                 android:layout_width="72dp"
                 android:layout_height="48dp"
-                android:contentDescription="@string/day"
+                android:contentDescription="icon"
                 android:src="@drawable/weathericon_1" />
 
             <LinearLayout
@@ -163,34 +167,35 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Partly Cloudy"
-                    android:textSize="20sp" />
+                    android:text="Scattered Showers"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="24C-31C"
-                    android:textSize="20sp" />
+                    android:text="22C-27C"
+                    android:textSize="18sp" />
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="72dp"
+            android:layout_height="60dp"
             android:gravity="center"
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="72dp"
-                android:layout_height="48dp"
-                android:gravity="center"
-                android:text="@string/day"
-                android:textSize="20sp" />
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:gravity="left|center"
+                android:text="Fri"
+                android:textSize="18sp" />
 
             <ImageView
                 android:layout_width="72dp"
                 android:layout_height="48dp"
-                android:contentDescription="@string/day"
+                android:contentDescription="icon"
                 android:src="@drawable/weathericon_1" />
 
             <LinearLayout
@@ -203,34 +208,35 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Partly Cloudy"
-                    android:textSize="20sp" />
+                    android:text="Mostly Cloudy"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="24C-31C"
-                    android:textSize="20sp" />
+                    android:text="22C-30C"
+                    android:textSize="18sp" />
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="72dp"
+            android:layout_height="60dp"
             android:gravity="center"
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="72dp"
-                android:layout_height="48dp"
-                android:gravity="center"
-                android:text="@string/day"
-                android:textSize="20sp" />
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:gravity="left|center"
+                android:text="Sat"
+                android:textSize="18sp" />
 
             <ImageView
                 android:layout_width="72dp"
                 android:layout_height="48dp"
-                android:contentDescription="@string/day"
+                android:contentDescription="icon"
                 android:src="@drawable/weathericon_1" />
 
             <LinearLayout
@@ -244,33 +250,34 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Partly Cloudy"
-                    android:textSize="20sp" />
+                    android:textSize="18sp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="24C-31C"
-                    android:textSize="20sp" />
+                    android:textSize="18sp" />
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="72dp"
+            android:layout_height="60dp"
             android:gravity="center"
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="72dp"
-                android:layout_height="48dp"
-                android:gravity="center"
-                android:text="@string/day"
-                android:textSize="20sp" />
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:gravity="left|center"
+                android:text="Sun"
+                android:textSize="18sp" />
 
             <ImageView
                 android:layout_width="72dp"
                 android:layout_height="48dp"
-                android:contentDescription="@string/day"
+                android:contentDescription="icon"
                 android:src="@drawable/weathericon_1" />
 
             <LinearLayout
@@ -283,14 +290,137 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Partly Cloudy"
-                    android:textSize="20sp" />
+                    android:text="Thunderstorms"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="24C-31C"
-                    android:textSize="20sp" />
+                    android:text="25C-28C"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:gravity="left|center"
+                android:text="Mon"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="72dp"
+                android:layout_height="48dp"
+                android:contentDescription="icon"
+                android:src="@drawable/weathericon_1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Scattered Thunderstorms"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="24C-27C"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:gravity="left|center"
+                android:text="Tue"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="72dp"
+                android:layout_height="48dp"
+                android:contentDescription="icon"
+                android:src="@drawable/weathericon_1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Showers"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="24C-26C"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:gravity="left|center"
+                android:text="Wed"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="72dp"
+                android:layout_height="48dp"
+                android:contentDescription="icon"
+                android:src="@drawable/weathericon_1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Scattered Thunderstorms"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="23C-27C"
+                    android:textSize="18sp" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
