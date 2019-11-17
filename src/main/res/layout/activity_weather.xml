@@ -9,17 +9,34 @@
     android:orientation="vertical"
     tools:context=".WeatherActivity">
 
-    <fragment
-        android:id="@+id/second_fragment"
-        class="vn.edu.usth.weather.WeatherFragment"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp" />
+        android:layout_height="wrap_content" />
 
-    <fragment
-        android:id="@+id/first_fragment"
-        class="vn.edu.usth.weather.ForecastFragment"
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_margin="20dp">
 
+        <fragment
+            android:id="@+id/Fragment1"
+            class="vn.edu.usth.weather.WeatherAndForecastFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <fragment
+            android:id="@+id/Fragment2"
+            class="vn.edu.usth.weather.WeatherAndForecastFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <fragment
+            android:id="@+id/Fragment3"
+            class="vn.edu.usth.weather.WeatherAndForecastFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </androidx.viewpager.widget.ViewPager>
 </LinearLayout>
