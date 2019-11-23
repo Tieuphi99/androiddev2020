@@ -6,39 +6,44 @@
     android:orientation="vertical"
     tools:context=".WeatherAndForecastFragment">
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
+    <FrameLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorTest"
-        android:orientation="vertical"
-        tools:context=".WeatherFragment">
+        android:background="@color/colorTest">
 
-        <TextView
-            android:id="@+id/status"
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="@string/Fire_40C"
-            android:textAlignment="gravity"
-            android:textSize="24sp" />
+            android:orientation="vertical"
+            android:background="@drawable/frame_new"
+            tools:context=".WeatherFragment">
 
-        <TextView
-            android:id="@+id/place"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginLeft="320dp"
-            android:text="@string/paris"
-            android:textSize="18sp" />
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Fire_40C"
+                android:textAlignment="gravity"
+                android:textSize="24sp" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_margin="36dp"
-            android:src="@drawable/weathericon_1" />
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/place"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:text="@string/paris"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/fire_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="36dp"
+                android:src="@drawable/weathericon_1" />
+        </RelativeLayout>
+    </FrameLayout>
 
     <ScrollView
         android:layout_width="match_parent"
