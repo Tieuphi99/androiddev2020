@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="40C\nFire"
+            android:text="@string/Fire_40C"
             android:textAlignment="gravity"
             android:textSize="24sp" />
 
@@ -29,7 +29,7 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
             android:layout_marginLeft="320dp"
-            android:text="Paris"
+            android:text="@string/paris"
             android:textSize="18sp" />
 
         <ImageView
@@ -48,6 +48,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
             android:background="@color/colorPhi"
             android:orientation="vertical">
 
@@ -62,13 +63,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:gravity="left|center"
-                    android:text="Mon"
+                    android:text="@string/monday"
                     android:textSize="18sp" />
 
                 <ImageView
                     android:layout_width="72dp"
                     android:layout_height="48dp"
-                    android:contentDescription="icon"
+                    android:contentDescription="@string/icon"
                     android:src="@drawable/weather_icon_002_sunny" />
 
                 <LinearLayout
@@ -81,13 +82,13 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Partly Cloudy"
+                        android:text="@string/partly_cloudy"
                         android:textSize="18sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="24C-31C"
+                        android:text="@string/C_24_31"
                         android:textSize="18sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -103,13 +104,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:gravity="left|center"
-                    android:text="Tue"
+                    android:text="@string/tuesday"
                     android:textSize="18sp" />
 
                 <ImageView
                     android:layout_width="72dp"
                     android:layout_height="48dp"
-                    android:contentDescription="icon"
+                    android:contentDescription="@string/icon"
                     android:src="@drawable/weather_icon_005_heavy_rain" />
 
                 <LinearLayout
@@ -122,13 +123,13 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Showers"
+                        android:text="@string/showers"
                         android:textSize="18sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="24C-30C"
+                        android:text="@string/C_24_30"
                         android:textSize="18sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -144,13 +145,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:gravity="left|center"
-                    android:text="Wed"
+                    android:text="@string/wednesday"
                     android:textSize="18sp" />
 
                 <ImageView
                     android:layout_width="72dp"
                     android:layout_height="48dp"
-                    android:contentDescription="icon"
+                    android:contentDescription="@string/icon"
                     android:src="@drawable/weather_icon_004_rainy" />
 
                 <LinearLayout
@@ -163,13 +164,13 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Rain"
+                        android:text="@string/rain"
                         android:textSize="18sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="22C-23C"
+                        android:text="@string/C_22_23"
                         android:textSize="18sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -185,13 +186,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:gravity="left|center"
-                    android:text="Thu"
+                    android:text="@string/thursday"
                     android:textSize="18sp" />
 
                 <ImageView
                     android:layout_width="72dp"
                     android:layout_height="48dp"
-                    android:contentDescription="icon"
+                    android:contentDescription="@string/icon"
                     android:src="@drawable/weather_icon_006_storm" />
 
                 <LinearLayout
@@ -204,13 +205,13 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Scattered Showers"
+                        android:text="@string/scattered_showers"
                         android:textSize="18sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="22C-27C"
+                        android:text="@string/C_22_27"
                         android:textSize="18sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -226,13 +227,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:gravity="left|center"
-                    android:text="Fri"
+                    android:text="@string/friday"
                     android:textSize="18sp" />
 
                 <ImageView
                     android:layout_width="72dp"
                     android:layout_height="48dp"
-                    android:contentDescription="icon"
+                    android:contentDescription="@string/icon"
                     android:src="@drawable/weather_icon_002_sunny" />
 
                 <LinearLayout
@@ -245,13 +246,13 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Mostly Cloudy"
+                        android:text="@string/mostly_cloudy"
                         android:textSize="18sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="22C-30C"
+                        android:text="@string/C_22_30"
                         android:textSize="18sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -267,13 +268,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:gravity="left|center"
-                    android:text="Sat"
+                    android:text="@string/saturday"
                     android:textSize="18sp" />
 
                 <ImageView
                     android:layout_width="72dp"
                     android:layout_height="48dp"
-                    android:contentDescription="icon"
+                    android:contentDescription="@string/icon"
                     android:src="@drawable/weather_icon_002_sunny" />
 
                 <LinearLayout
@@ -286,13 +287,13 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Partly Cloudy"
+                        android:text="@string/partly_cloudy"
                         android:textSize="18sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="24C-31C"
+                        android:text="@string/C_24_31"
                         android:textSize="18sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -308,13 +309,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:gravity="left|center"
-                    android:text="Sun"
+                    android:text="@string/sunday"
                     android:textSize="18sp" />
 
                 <ImageView
                     android:layout_width="72dp"
                     android:layout_height="48dp"
-                    android:contentDescription="icon"
+                    android:contentDescription="@string/icon"
                     android:src="@drawable/weather_icon_007_thunder" />
 
                 <LinearLayout
@@ -327,13 +328,13 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Thunderstorms"
+                        android:text="@string/thunderstorms"
                         android:textSize="18sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="25C-28C"
+                        android:text="@string/C_25_28"
                         android:textSize="18sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -349,13 +350,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:gravity="left|center"
-                    android:text="Mon"
+                    android:text="@string/monday"
                     android:textSize="18sp" />
 
                 <ImageView
                     android:layout_width="72dp"
                     android:layout_height="48dp"
-                    android:contentDescription="icon"
+                    android:contentDescription="@string/icon"
                     android:src="@drawable/weather_icon_006_storm" />
 
                 <LinearLayout
@@ -368,13 +369,13 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Scattered Thunderstorms"
+                        android:text="@string/scattered_thunderstorms"
                         android:textSize="18sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="24C-27C"
+                        android:text="@string/C_24_27"
                         android:textSize="18sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -390,13 +391,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:gravity="left|center"
-                    android:text="Tue"
+                    android:text="@string/tuesday"
                     android:textSize="18sp" />
 
                 <ImageView
                     android:layout_width="72dp"
                     android:layout_height="48dp"
-                    android:contentDescription="icon"
+                    android:contentDescription="@string/icon"
                     android:src="@drawable/weather_icon_005_heavy_rain" />
 
                 <LinearLayout
@@ -409,54 +410,13 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Showers"
+                        android:text="@string/showers"
                         android:textSize="18sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="24C-26C"
-                        android:textSize="18sp" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="48dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:gravity="left|center"
-                    android:text="Wed"
-                    android:textSize="18sp" />
-
-                <ImageView
-                    android:layout_width="72dp"
-                    android:layout_height="48dp"
-                    android:contentDescription="icon"
-                    android:src="@drawable/weather_icon_006_storm" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Scattered Thunderstorms"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="23C-27C"
+                        android:text="@string/C_24_26"
                         android:textSize="18sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -472,13 +432,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:gravity="left|center"
-                    android:text="Thu"
+                    android:text="@string/wednesday"
                     android:textSize="18sp" />
 
                 <ImageView
                     android:layout_width="72dp"
                     android:layout_height="48dp"
-                    android:contentDescription="icon"
+                    android:contentDescription="@string/icon"
                     android:src="@drawable/weather_icon_006_storm" />
 
                 <LinearLayout
@@ -491,13 +451,13 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Scattered Thunderstorms"
+                        android:text="@string/scattered_thunderstorms"
                         android:textSize="18sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="23C-27C"
+                        android:text="@string/C_23_27"
                         android:textSize="18sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -513,13 +473,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:gravity="left|center"
-                    android:text="Fri"
+                    android:text="@string/thursday"
                     android:textSize="18sp" />
 
                 <ImageView
                     android:layout_width="72dp"
                     android:layout_height="48dp"
-                    android:contentDescription="icon"
+                    android:contentDescription="@string/icon"
                     android:src="@drawable/weather_icon_006_storm" />
 
                 <LinearLayout
@@ -532,13 +492,13 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Scattered Thunderstorms"
+                        android:text="@string/scattered_thunderstorms"
                         android:textSize="18sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="23C-27C"
+                        android:text="@string/C_23_27"
                         android:textSize="18sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -554,13 +514,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:gravity="left|center"
-                    android:text="Sat"
+                    android:text="@string/friday"
                     android:textSize="18sp" />
 
                 <ImageView
                     android:layout_width="72dp"
                     android:layout_height="48dp"
-                    android:contentDescription="icon"
+                    android:contentDescription="@string/icon"
                     android:src="@drawable/weather_icon_006_storm" />
 
                 <LinearLayout
@@ -573,17 +533,57 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Scattered Thunderstorms"
+                        android:text="@string/scattered_thunderstorms"
                         android:textSize="18sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="23C-27C"
+                        android:text="@string/C_23_27"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="left|center"
+                    android:text="@string/saturday"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="48dp"
+                    android:contentDescription="@string/icon"
+                    android:src="@drawable/weather_icon_006_storm" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/scattered_thunderstorms"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/C_23_27"
                         android:textSize="18sp" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
-
 </LinearLayout>

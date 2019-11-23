@@ -1,5 +1,29 @@
 <resources>
     <string name="app_name">USTH Weather</string>
-    <string name="day">Thur</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="thursday">Thur</string>
+    <string name="monday">Mon</string>
+    <string name="wednesday">Wed</string>
+    <string name="tuesday">Tue</string>
+    <string name="friday">Fri</string>
+    <string name="saturday">Sat</string>
+    <string name="sunday">Sun</string>
+    <string name="partly_cloudy">Partly Cloudy</string>
+    <string name="scattered_showers">Scattered Showers</string>
+    <string name="scattered_thunderstorms">Scattered Thunderstorms</string>
+    <string name="showers">Showers</string>
+    <string name="rain">Rain</string>
+    <string name="mostly_cloudy">Mostly Cloudy</string>
+    <string name="thunderstorms">Thunderstorms</string>
+    <string name="paris">Paris</string>
+    <string name="Fire_40C">40C\nFire</string>
+    <string name="icon">icon</string>
+    <string name="C_24_31" translatable="false">24C-31C</string>
+    <string name="C_24_30" translatable="false">24C-30C</string>
+    <string name="C_22_23" translatable="false">22C-23C</string>
+    <string name="C_22_27" translatable="false">22C-27C</string>
+    <string name="C_22_30" translatable="false">22C-30C</string>
+    <string name="C_25_28" translatable="false">25C-28C</string>
+    <string name="C_24_27" translatable="false">24C-27C</string>
+    <string name="C_24_26" translatable="false">24C-26C</string>
+    <string name="C_23_27" translatable="false">23C-27C</string>
 </resources>
