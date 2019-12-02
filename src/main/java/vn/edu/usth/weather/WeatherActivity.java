@@ -21,9 +21,9 @@ import android.widget.TextView;
 import com.google.android.material.tabs.TabLayout;
 
 import java.io.FileOutputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
 
 public class WeatherActivity extends AppCompatActivity {
 
@@ -61,19 +61,26 @@ public class WeatherActivity extends AppCompatActivity {
         Extraction();
     }
 
-    private void Extraction() throws IOException {
-        InputStream is = this.getResources().openRawResource(R.raw.anhlaai_phuongly);
+    private void Extraction() {
         String filePath = Environment.getExternalStorageDirectory() + "/Android/data/vn.edu.usth.weather/anhlaai_phuongly.mp3";
-        OutputStream os = new FileOutputStream(filePath);
-        byte[] buffer = new byte[1024];
-        int length;
-        while ((length = is.read(buffer)) > 0)
-        {
-            os.write(buffer, 0, length);
+        try {
+
+            InputStream is = this.getResources().openRawResource(R.raw.anhlaai_phuongly);
+            FileOutputStream os = null;
+            os = new FileOutputStream(filePath);
+            byte[] buffer = new byte[1024];
+            int length;
+            while ((length = is.read(buffer)) > 0) {
+                os.write(buffer, 0, length);
+            }
+            os.flush();
+            os.close();
+            is.close();
+        }catch (FileNotFoundException ie) {
+            ie.printStackTrace();
+        }catch (IOException ie) {
+            ie.printStackTrace();
         }
-        os.flush();
-        os.close();
-        is.close();
     }
 
     @Override
