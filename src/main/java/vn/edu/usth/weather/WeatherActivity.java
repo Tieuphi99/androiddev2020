@@ -28,6 +28,7 @@ import java.io.OutputStream;
 
 public class WeatherActivity extends AppCompatActivity {
     MediaPlayer mp;
+    Handler handler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,10 +62,7 @@ public class WeatherActivity extends AppCompatActivity {
         } catch (IOException ie) {
             ie.printStackTrace();
         }
-    }
-
-    private void Idkhowtocallthis(){
-        final Handler handler = new Handler(Looper.getMainLooper()) {
+        handler = new Handler(Looper.getMainLooper()) {
             @Override
             public void handleMessage(Message msg) {
 // This method is executed in main thread
@@ -72,28 +70,8 @@ public class WeatherActivity extends AppCompatActivity {
                 Toast.makeText(WeatherActivity.this, content, Toast.LENGTH_SHORT).show();
             }
         };
-        Thread t = new Thread(new Runnable() {
-            @Override
-            public void run() {
-// this method is run in a worker thread
-                try {
-// wait for 5 seconds to simulate a long network access
-                    Thread.sleep(5000);
-                }
-                catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-// Assume that we got our data from server
-                Bundle bundle = new Bundle();
-                bundle.putString("server_response", "some sample json here");
-// notify main thread
-                Message msg = new Message();
-                msg.setData(bundle);
-                handler.sendMessage(msg);
-            }
-        });
-        t.start();
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -106,7 +84,26 @@ public class WeatherActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_search:
-                Idkhowtocallthis();
+                Thread t = new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+// this method is run in a worker thread
+                        try {
+// wait for 5 seconds to simulate a long network access
+                            Thread.sleep(5000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+// Assume that we got our data from server
+                        Bundle bundle = new Bundle();
+                        bundle.putString("server_response", "some sample json here");
+// notify main thread
+                        Message msg = new Message();
+                        msg.setData(bundle);
+                        handler.sendMessage(msg);
+                    }
+                });
+                t.start();
                 Toast.makeText(this, "Refreshing", Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.settings:
