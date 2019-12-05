@@ -7,7 +7,9 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.media.MediaPlayer;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
@@ -25,6 +27,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.net.URL;
 
 public class WeatherActivity extends AppCompatActivity {
     MediaPlayer mp;
@@ -62,16 +65,38 @@ public class WeatherActivity extends AppCompatActivity {
         } catch (IOException ie) {
             ie.printStackTrace();
         }
-        handler = new Handler(Looper.getMainLooper()) {
-            @Override
-            public void handleMessage(Message msg) {
-// This method is executed in main thread
-                String content = msg.getData().getString("server_response");
-                Toast.makeText(WeatherActivity.this, content, Toast.LENGTH_SHORT).show();
-            }
-        };
+
     }
 
+
+    private class backGround extends AsyncTask<Void, Integer, String> {
+        @Override
+        protected void onPreExecute() {
+        }
+
+        @Override
+        protected String doInBackground(Void... voids) {
+            try {
+// wait for 5 seconds to simulate a long network access
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            String server_response = "some sample json here";
+            return server_response;
+        }
+
+        @Override
+        protected void onProgressUpdate(Integer... values) {
+            super.onProgressUpdate(values);
+        }
+
+        @Override
+        protected void onPostExecute(String string) {
+            Toast.makeText(WeatherActivity.this, string, Toast.LENGTH_LONG).show();
+            super.onPostExecute(string);
+        }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -84,26 +109,7 @@ public class WeatherActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_search:
-                Thread t = new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-// this method is run in a worker thread
-                        try {
-// wait for 5 seconds to simulate a long network access
-                            Thread.sleep(5000);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-// Assume that we got our data from server
-                        Bundle bundle = new Bundle();
-                        bundle.putString("server_response", "some sample json here");
-// notify main thread
-                        Message msg = new Message();
-                        msg.setData(bundle);
-                        handler.sendMessage(msg);
-                    }
-                });
-                t.start();
+                new backGround().execute();
                 Toast.makeText(this, "Refreshing", Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.settings:
