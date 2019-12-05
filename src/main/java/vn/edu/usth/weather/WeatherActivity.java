@@ -8,6 +8,9 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -19,6 +22,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.android.material.tabs.TabLayout;
@@ -27,17 +32,25 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 
 public class WeatherActivity extends AppCompatActivity {
     MediaPlayer mp;
     Handler handler;
+    URL url;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.i("create", "Noice");
         setContentView(R.layout.activity_weather);
+        try {
+            url = new URL("https://i.pinimg.com/originals/72/40/55/724055733047bec21ad96ce4dad37013.jpg");
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
         mp = MediaPlayer.create(WeatherActivity.this, R.raw.anhlaai_phuongly);
         mp.start();
         Toolbar toolbar = findViewById(R.id.toolbar_weather);
@@ -69,21 +82,33 @@ public class WeatherActivity extends AppCompatActivity {
     }
 
 
-    private class backGround extends AsyncTask<Void, Integer, String> {
+    private class backGround extends AsyncTask<URL, Integer, Bitmap> {
+        Bitmap bitmap;
         @Override
         protected void onPreExecute() {
         }
 
         @Override
-        protected String doInBackground(Void... voids) {
+        protected Bitmap doInBackground(URL... urls) {
             try {
-// wait for 5 seconds to simulate a long network access
-                Thread.sleep(5000);
-            } catch (InterruptedException e) {
+                HttpURLConnection connection =
+                        (HttpURLConnection) url.openConnection();
+                connection.setRequestMethod("GET");
+                connection.setDoInput(true);
+// allow reading response code and response dataconnection.
+                connection.connect();
+                // Receive response
+                int response = connection.getResponseCode();
+                Log.i("USTHWeather", "The response is: " + response);
+                InputStream is = connection.getInputStream();
+// Process image response
+                bitmap = BitmapFactory.decodeStream(is);
+                connection.disconnect();
+            } catch (IOException e) {
                 e.printStackTrace();
             }
-            String server_response = "some sample json here";
-            return server_response;
+
+            return bitmap;
         }
 
         @Override
@@ -92,9 +117,11 @@ public class WeatherActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(String string) {
-            Toast.makeText(WeatherActivity.this, string, Toast.LENGTH_LONG).show();
-            super.onPostExecute(string);
+        protected void onPostExecute(Bitmap bitmap) {
+            Drawable d = new BitmapDrawable(getResources(), bitmap);
+            LinearLayout forecast_fragment = findViewById(R.id.forecast_fragment);
+            forecast_fragment.setBackground(d);
+            super.onPostExecute(bitmap);
         }
     }
 
@@ -109,7 +136,7 @@ public class WeatherActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_search:
-                new backGround().execute();
+                new backGround().execute(url);
                 Toast.makeText(this, "Refreshing", Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.settings:
