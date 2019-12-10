@@ -15,9 +15,9 @@ import android.media.MediaPlayer;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
-import android.os.Handler;
-import android.os.Looper;
-import android.os.Message;
+//import android.os.Handler;
+//import android.os.Looper;
+//import android.os.Message;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -26,6 +26,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.ImageRequest;
+import com.android.volley.toolbox.Volley;
 import com.google.android.material.tabs.TabLayout;
 
 import java.io.FileOutputStream;
@@ -38,7 +42,7 @@ import java.net.URL;
 
 public class WeatherActivity extends AppCompatActivity {
     MediaPlayer mp;
-    Handler handler;
+    //    Handler handler;
     URL url;
 
     @Override
@@ -47,7 +51,7 @@ public class WeatherActivity extends AppCompatActivity {
         Log.i("create", "Noice");
         setContentView(R.layout.activity_weather);
         try {
-            url = new URL("https://i.pinimg.com/originals/72/40/55/724055733047bec21ad96ce4dad37013.jpg");
+            url = new URL("https://usth.edu.vn/uploads/logo_1.png");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
@@ -81,49 +85,68 @@ public class WeatherActivity extends AppCompatActivity {
 
     }
 
+    private void volley() {
+        Response.Listener<Bitmap> listener =
+                new Response.Listener<Bitmap>() {
+                    @Override
+                    public void onResponse(Bitmap response) {
+                        Drawable d = new BitmapDrawable(getResources(), response);
+                        LinearLayout forecast_fragment = findViewById(R.id.forecast_fragment);
+                        forecast_fragment.setBackground(d);
+                    }
+                };
 
-    private class backGround extends AsyncTask<URL, Integer, Bitmap> {
-        Bitmap bitmap;
-        @Override
-        protected void onPreExecute() {
-        }
-
-        @Override
-        protected Bitmap doInBackground(URL... urls) {
-            try {
-                HttpURLConnection connection =
-                        (HttpURLConnection) url.openConnection();
-                connection.setRequestMethod("GET");
-                connection.setDoInput(true);
-// allow reading response code and response dataconnection.
-                connection.connect();
-                // Receive response
-                int response = connection.getResponseCode();
-                Log.i("USTHWeather", "The response is: " + response);
-                InputStream is = connection.getInputStream();
-// Process image response
-                bitmap = BitmapFactory.decodeStream(is);
-                connection.disconnect();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            return bitmap;
-        }
-
-        @Override
-        protected void onProgressUpdate(Integer... values) {
-            super.onProgressUpdate(values);
-        }
-
-        @Override
-        protected void onPostExecute(Bitmap bitmap) {
-            Drawable d = new BitmapDrawable(getResources(), bitmap);
-            LinearLayout forecast_fragment = findViewById(R.id.forecast_fragment);
-            forecast_fragment.setBackground(d);
-            super.onPostExecute(bitmap);
-        }
+        RequestQueue queue = Volley.newRequestQueue(this);
+        ImageRequest imageRequest = new ImageRequest(
+                "https://usth.edu.vn/uploads/logo_1.png",
+                listener, 0, 0, ImageView.ScaleType.CENTER,
+                Bitmap.Config.ARGB_8888, null);
+        queue.add(imageRequest);
     }
+
+//    private class backGround extends AsyncTask<URL, Integer, Bitmap> {
+//        Bitmap bitmap;
+//
+//        @Override
+//        protected void onPreExecute() {
+//        }
+//
+//        @Override
+//        protected Bitmap doInBackground(URL... urls) {
+//            try {
+//                HttpURLConnection connection =
+//                        (HttpURLConnection) url.openConnection();
+//                connection.setRequestMethod("GET");
+//                connection.setDoInput(true);
+//// allow reading response code and response dataconnection.
+//                connection.connect();
+//                // Receive response
+//                int response = connection.getResponseCode();
+//                Log.i("USTHWeather", "The response is: " + response);
+//                InputStream is = connection.getInputStream();
+//// Process image response
+//                bitmap = BitmapFactory.decodeStream(is);
+//                connection.disconnect();
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//
+//            return bitmap;
+//        }
+//
+//        @Override
+//        protected void onProgressUpdate(Integer... values) {
+//            super.onProgressUpdate(values);
+//        }
+//
+//        @Override
+//        protected void onPostExecute(Bitmap bitmap) {
+//            Drawable d = new BitmapDrawable(getResources(), bitmap);
+//            LinearLayout forecast_fragment = findViewById(R.id.forecast_fragment);
+//            forecast_fragment.setBackground(d);
+//            super.onPostExecute(bitmap);
+//        }
+//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -136,7 +159,8 @@ public class WeatherActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_search:
-                new backGround().execute(url);
+//                new backGround().execute(url);
+                volley();
                 Toast.makeText(this, "Refreshing", Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.settings:
