@@ -24,13 +24,20 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
+import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageRequest;
+import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.tabs.TabLayout;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -82,10 +89,9 @@ public class WeatherActivity extends AppCompatActivity {
         } catch (IOException ie) {
             ie.printStackTrace();
         }
-
     }
 
-    private void volley() {
+    private void newBackground() {
         Response.Listener<Bitmap> listener =
                 new Response.Listener<Bitmap>() {
                     @Override
@@ -160,7 +166,7 @@ public class WeatherActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.action_search:
 //                new backGround().execute(url);
-                volley();
+                newBackground();
                 Toast.makeText(this, "Refreshing", Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.settings:
